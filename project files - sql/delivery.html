@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+<style>
+body {
+    background: rgba(0, 0, 0, 0.1) url("delivery.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.delivery-address {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.address-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.column {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    color: #e74944;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.delivery-address h2 {
+    color: #e74944;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-trigger {
+    cursor: pointer;
+    color: #e74944;
+    text-decoration: underline;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.modal-toggle {
+    display: none;
+}
+
+.modal-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-toggle:checked + .modal-content {
+    display: block;
+}
+
+.modal-content label.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e74944;
+}
+
+.modal-content h2 {
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> OUT FOR DELIVERY </h1>
+
+        
+        <div class="delivery-address">
+            <h2>Delivery Address</h2>
+            <div class="address-details">
+                <!-- Address 1 -->
+                <div class="column">
+                    <p><strong>Address ID:</strong> 1</p>
+                    <p><strong>Street:</strong> 123 Main Street</p>
+                    <p><strong>User ID:</strong> 1</p>
+                    <p><strong>City:</strong> Your City</p>
+                    <p><strong>State:</strong> Your State</p>
+                    <p><strong>Postal Code:</strong> 12345</p>
+                    <br>
+                    <div class="column buttons">
+                        <label for="deliverer-details-modal" class="modal-trigger">Deliverer Details</label>
+                        <label for="delivery-status-modal" class="modal-trigger">Delivery Status</label>
+                    </div>
+                </div>
+
+                <!-- Address 2 -->
+                <div class="column">
+                    <p><strong>Address ID:</strong> 2</p>
+                    <p><strong>Street:</strong> 456 Oak Avenue</p>
+                    <p><strong>User ID:</strong> 2</p>
+                    <p><strong>City:</strong> Another City</p>
+                    <p><strong>State:</strong> Another State</p>
+                    <p><strong>Postal Code:</strong> 56789</p>
+                    <br>
+                    <div class="column buttons">
+                        <label for="deliverer-details-modal" class="modal-trigger">Deliverer Details</label>
+                        <label for="delivery-status-modal" class="modal-trigger">Delivery Status</label>
+                    </div>
+                </div>
+
+                <!-- Address 3 -->
+                <div class="column">
+                    <p><strong>Address ID:</strong> 3</p>
+                    <p><strong>Street:</strong> 789 Pine Street</p>
+                    <p><strong>User ID:</strong> 3</p>
+                    <p><strong>City:</strong> Yet Another City</p>
+                    <p><strong>State:</strong> Yet Another State</p>
+                    <p><strong>Postal Code:</strong> 67890</p>
+                    <br>
+                    <div class="column buttons">
+                        <label for="deliverer-details-modal" class="modal-trigger">Deliverer Details</label>
+                        <label for="delivery-status-modal" class="modal-trigger">Delivery Status</label>
+                    </div>
+                </div>
+
+                <!-- Add more addresses with the corresponding values -->
+
+            </div>
+        </div>
+    </div>
+
+    
+    <input type="checkbox" id="deliverer-details-modal" class="modal-toggle">
+    <div id="deliverer-details-modal-content" class="modal-content">
+        <label for="deliverer-details-modal" class="modal-close">&times;</label>
+        <h2>Deliverer Details</h2>
+        <p><strong>Driver ID:</strong> 1</p>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Vehicle:</strong> Delivery Vehicle</p>
+        <p><strong>Active:</strong> Yes</p>
+    </div>
+
+    
+    <input type="checkbox" id="delivery-status-modal" class="modal-toggle">
+    <div id="delivery-status-modal-content" class="modal-content">
+        <label for="delivery-status-modal" class="modal-close">&times;</label>
+        <h2>Delivery Status</h2>
+        <p><strong>Delivery ID:</strong> 1</p>
+        <p><strong>Order ID:</strong> 1</p>
+        <p><strong>Driver ID:</strong> 1</p>
+        <p><strong>Delivery Date:</strong> 2023-10-10</p>
+        <p><strong>Status:</strong> In Transit</p>
+    </div>
+</body>
+</html>

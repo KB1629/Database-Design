@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("restaurantbg.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e74944;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .dish {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish p {
+            margin: 8px 0;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .buy-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Menu</h1>
+
+        <!-- Dish 1 -->
+        <div class="dish">
+            <p><strong>Dish ID:</strong> 1</p>
+            <p><strong>Restaurant ID:</strong> 1</p>
+            <p><strong>Name:</strong> Chettinad Chicken Curry</p>
+            <p><strong>Price:</strong> $449.99</p>
+            <p><strong>Description:</strong> Spicy and flavorful chicken curry</p>
+            <button class="buy-btn" onclick="addToOrder(1, 1, 'Chettinad Chicken Curry', 449.99, 'Spicy and flavorful chicken curry')">Buy</button>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="dish">
+            <p><strong>Dish ID:</strong> 2</p>
+            <p><strong>Restaurant ID:</strong> 1</p>
+            <p><strong>Name:</strong> Masala Dosa</p>
+            <p><strong>Price:</strong> $220.49</p>
+            <p><strong>Description:</strong> Crispy rice crepe with potato filling</p>
+            <button class="buy-btn" onclick="addToOrder(2, 1, 'Masala Dosa', 220.49, 'Crispy rice crepe with potato filling')">Buy</button>
+        </div>
+
+<!-- Dish 3 -->
+<div class="dish">
+    <p><strong>Dish ID:</strong> 3</p>
+    <p><strong>Restaurant ID:</strong> 2</p>
+    <p><strong>Name:</strong> Set Dosa</p>
+    <p><strong>Price:</strong> $180.99</p>
+    <p><strong>Description:</strong> Soft and spongy mini dosas</p>
+    <button class="buy-btn" onclick="addToOrder(3, 2, 'Set Dosa', 180.99, 'Soft and spongy mini dosas')">Buy</button>
+</div>
+
+<!-- Dish 4 -->
+<div class="dish">
+    <p><strong>Dish ID:</strong> 4</p>
+    <p><strong>Restaurant ID:</strong> 2</p>
+    <p><strong>Name:</strong> Bisi Bele Bath</p>
+    <p><strong>Price:</strong> $298.99</p>
+    <p><strong>Description:</strong> Hot lentil rice with veggies</p>
+    <button class="buy-btn" onclick="addToOrder(4, 2, 'Bisi Bele Bath', 298.99, 'Hot lentil rice with veggies')">Buy</button>
+</div>
+
+<!-- Dish 5 -->
+<div class="dish">
+    <p><strong>Dish ID:</strong> 5</p>
+    <p><strong>Restaurant ID:</strong> 3</p>
+    <p><strong>Name:</strong> Gongura Chicken</p>
+    <p><strong>Price:</strong> $314.99</p>
+    <p><strong>Description:</strong> Tangy Andhra chicken dish</p>
+    <button class="buy-btn" onclick="addToOrder(5, 3, 'Gongura Chicken', 314.99, 'Tangy Andhra chicken dish')">Buy</button>
+</div>
+
+<!-- Dish 6 -->
+<div class="dish">
+    <p><strong>Dish ID:</strong> 6</p>
+    <p><strong>Restaurant ID:</strong> 3</p>
+    <p><strong>Name:</strong> Pulihora</p>
+    <p><strong>Price:</strong> $125.49</p>
+    <p><strong>Description:</strong> Sour tamarind rice with peanuts</p>
+    <button class="buy-btn" onclick="addToOrder(6, 3, 'Pulihora', 125.49, 'Sour tamarind rice with peanuts')">Buy</button>
+    <div id="success-message" class="success-message"></div>
+</div>
+
+
+<div class="order-items"></div>
+
+<script>
+    function addToOrder(dishId, restaurantId, itemName, itemPrice, itemDescription) {
+        // Create a new row for the order
+        var newRow = document.createElement('div');
+        newRow.className = 'dish';
+        newRow.innerHTML = `
+            <p><strong>Dish ID:</strong> ${dishId}</p>
+            <p><strong>Restaurant ID:</strong> ${restaurantId}</p>
+            <p><strong>Name:</strong> ${itemName}</p>
+            <p><strong>Price:</strong> $${itemPrice}</p>
+            <p><strong>Description:</strong> ${itemDescription}</p>
+        `;
+
+        // Append the new row to the order items
+        var orderItems = document.querySelector('.order-items');
+        orderItems.appendChild(newRow);
+        
+        // Send the order details to the server
+        fetch('/api/order1', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                dishId,
+                restaurantId,
+                itemName,
+                itemPrice,
+                itemDescription
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Order saved:', data);
+            const successMessage = document.getElementById('success-message');
+                successMessage.innerText = 'Order placed successfully!';
+                
+                // Clear success message after a few seconds (adjust timeout as needed)
+                setTimeout(() => {
+                    successMessage.innerText = '';
+                }, 3000); // 3000 milliseconds (3 seconds)
+        })
+        .catch(error => {
+            console.error('Error saving order:', error);
+        });
+    }
+</script>
+</body>
+
+</html>

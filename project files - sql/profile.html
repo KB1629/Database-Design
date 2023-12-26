@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <STYLE>
+body {
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    width: 800px;
+    padding: 40px;
+}
+
+h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-details, .favorites, .saved-cards {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.user-details h1, .favorites h2, .saved-cards h2 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-info p, .favorites-table table, .saved-cards-table table {
+    margin: 5px 0;
+    color: #666;
+    font-size: 18px;
+}
+
+.favorites-table th, .saved-cards-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 700;
+}
+
+    </STYLE>
+</head>
+<body>
+    <div class="container">
+
+        <div class="user-details">
+            <h1>User Details</h1>
+            <div class="user-info">
+                <p><strong>User ID:</strong> UserID123</p>
+                <p><strong>Username:</strong> JohnDoe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Password:</strong> ********</p>
+                <p><strong>Registered Date:</strong> 2023-01-15</p>
+            </div>
+        </div>
+
+
+        <div class="favorites">
+            <h2>Favorites</h2>
+            <div class="favorites-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Favorite ID</th>
+                            <th>User ID</th>
+                            <th>Restaurant ID</th>
+                            <th>Added Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>UserID123</td>
+                            <td>RestaurantID1</td>
+                            <td>2023-02-20</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="saved-cards">
+            <h2>Saved Cards</h2>
+            <div class="saved-cards-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Payment Method</th>
+                            <th>User ID</th>
+                            <th>Card Number</th>
+                            <th>Expiry Date</th>
+                            <th>CVV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Visa</td>
+                            <td>UserID123</td>
+                            <td>**** **** **** 1234</td>
+                            <td>05/25</td>
+                            <td>***</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 40px;
+}
+
+.form h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #f5576c;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f093fb;
+}
+
+.register-link a {
+    color: #f5576c;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="login.php" method="POST" class="form">
+            <h1>User Login</h1>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit"><a href="home.html">Login</a></button>
+            
+            </div>
+        </form>
+    </div>
+</body>
+</html>

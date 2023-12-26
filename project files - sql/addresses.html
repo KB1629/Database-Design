@@ -1,0 +1,37 @@
+
+<STYLE>
+    .style{
+    background-color: rgba(20, 161, 185, 0.692);    
+    height: 120px;
+    width: px;
+    border-radius: 10px;
+    padding: 25px 40px 50px 70px;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+}
+body{
+    background-image: url("bgpage2.jpeg");
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+</STYLE>
+<div class="style">
+    <form action="update_address.php" method="POST">
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street"><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"><br>
+        
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state"><br>
+        
+        <label for="postalCode">Postal Code:</label>
+        <input type="text" id="postalCode" name="postalCode"><br>
+        
+        <button type="submit">Update Address</button>
+    </form>
+</div>  
+  

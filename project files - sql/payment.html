@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <STYLE>:root {
+        --primary-color: #1abc9c;
+        --secondary-color: #2c3e50;
+        --font-family: 'Georgia', serif;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: var(--font-family);
+        background-color: #bdc3c7;
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+        text-align: center;
+        color: var(--primary-color);
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        color: var(--secondary-color);
+        margin-top: 0;
+        font-size: 2em;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+    }
+    
+    </STYLE>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment</h1>
+
+
+        <div class="payment-details">
+            <h2>Payment Details</h2>
+            <table>
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Order ID</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>PaymentID1</td>
+                    <td>OrderID1</td>
+                    <td>Credit Card</td>
+                    <td>$21.98</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>

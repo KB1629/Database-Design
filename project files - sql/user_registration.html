@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+body {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 40px;
+}
+
+.form h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #8fd3f4;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #84fab0;
+}
+
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #8fd3f4;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/register" method="POST" class="form">
+            
+            <h1>User Registration</h1>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Register</button>
+            <div class="login-link">
+                Already a user? <a href="home.html">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
